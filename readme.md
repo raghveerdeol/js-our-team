@@ -23,6 +23,7 @@ Stampare le stesse informazioni su DOM sottoforma di stringhe -->
 - richiamo la section in selectionEl;
 - nel js creo al interno di un ciclo for l'elemento article;
 - semore al interno del ciclo, al articleEl aggiungo team[index], esempio: articleEl.append(team[index]);
+
 BONUS 1:
 Trasformare la stringa foto in una immagine effettiva
 BONUS 2:

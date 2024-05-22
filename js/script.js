@@ -1,3 +1,4 @@
+let sectionEl = document.querySelector("section");
 let team = [
     {
         nome : "Wayne Barnett",
@@ -30,11 +31,21 @@ let team = [
         foto : "barbara-ramos-graphic-designer.jpg",
     }
 ];
+stampaInConsole(team);
 
-for (let index = 0; index < team.length; index++) {
-    const singolaClasse = team[index];
-    for (let chiave in team[index]){
-        console.log(singolaClasse[chiave]);
+function stampaInConsole(array) {
+    for (let index = 0; index < array.length; index++) {
+        const singolaClasse = array[index];
+        for (let chiave in array[index]){
+            console.log(singolaClasse[chiave]);
+        }
     }
 }
 console.log(team)
+
+
+// Stampare le stesse informazioni su DOM sottoforma di stringhe -->
+// -creo una section nel main;
+// - richiamo la section in selectionEl;
+// - nel js creo al interno di un ciclo for l'elemento article;
+// - semore al interno del ciclo, al articleEl aggiungo team[index], esempio: articleEl.append(team[index]);

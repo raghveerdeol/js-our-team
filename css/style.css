@@ -6,7 +6,6 @@ section{
 }
 section > article{
     border: 1px solid blue;
-    height: 300px;
     text-align: center;
     display: flex;
     flex-direction: column-reverse;

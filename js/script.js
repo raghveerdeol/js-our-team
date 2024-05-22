@@ -3,7 +3,7 @@ let team = [
     {
         nome : "Wayne Barnett",
         ruolo : "Founder & CEO",
-        foto : "Founder & CEO",
+        foto : "wayne-barnett-founder-ceo.jpg",
     },
     {
         nome : "Angela Caroll",
@@ -50,10 +50,15 @@ for (let index = 0; index < team.length; index++) {
     const singolaClasse = team[index];
     let articleEl = document.createElement("article");
     for (let key in team[index]){
+        if (key === "foto") {
+            let imgEl = document.createElement("img");
+            imgEl.src = "./img/" + singolaClasse[key];
+            articleEl.appendChild(imgEl);
+        } else{
             let divEl = document.createElement("div");
             articleEl.appendChild(divEl);
             divEl.append(singolaClasse[key]);
-            articleEl.append(divEl);
+        }
         }
         sectionEl.append(articleEl);    
     }

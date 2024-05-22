@@ -1,0 +1,15 @@
+section{
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+section > article{
+    border: 1px solid blue;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 400px;
+    margin-bottom: 3rem;
+}

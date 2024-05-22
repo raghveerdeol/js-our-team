@@ -32,7 +32,7 @@ let team = [
     }
 ];
 stampaInConsole(team);
-stampaNelDom(team);
+// stampaNelDom(team);
 
 function stampaInConsole(array) {
     for (let index = 0; index < array.length; index++) {
@@ -42,21 +42,18 @@ function stampaInConsole(array) {
         }
     }
 }
+let sectionEl = document.querySelector("section");
 
-function stampaNelDom(array) {
-    let sectionEl = document.querySelector("section");
-    for (let index = 0; index < array.length; index++) {
-        const singolaClasse = array[index];
-        let articleEl = document.createElement("article");
-        sectionEl.appendChild(articleEl);
-        for (let chiave in array[index]){
-            articleEl.append(singolaClasse[chiave]);
+
+
+for (let index = 0; index < team.length; index++) {
+    const singolaClasse = team[index];
+    let articleEl = document.createElement("article");
+    for (let key in team[index]){
+            let divEl = document.createElement("div");
+            articleEl.appendChild(divEl);
+            divEl.append(singolaClasse[key]);
+            articleEl.append(divEl);
         }
+        sectionEl.append(articleEl);    
     }
-
-}
-// Stampare le stesse informazioni su DOM sottoforma di stringhe -->
-// -creo una section nel main;
-// - richiamo la section in selectionEl;
-// - nel js creo al interno di un ciclo for l'elemento article;
-// - semore al interno del ciclo, al articleEl aggiungo team[index], esempio: articleEl.append(team[index]);

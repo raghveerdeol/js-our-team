@@ -1,4 +1,4 @@
-let sectionEl = document.querySelector("section");
+
 let team = [
     {
         nome : "Wayne Barnett",
@@ -32,6 +32,7 @@ let team = [
     }
 ];
 stampaInConsole(team);
+stampaNelDom(team);
 
 function stampaInConsole(array) {
     for (let index = 0; index < array.length; index++) {
@@ -41,9 +42,19 @@ function stampaInConsole(array) {
         }
     }
 }
-console.log(team)
 
+function stampaNelDom(array) {
+    let sectionEl = document.querySelector("section");
+    for (let index = 0; index < array.length; index++) {
+        const singolaClasse = array[index];
+        let articleEl = document.createElement("article");
+        sectionEl.appendChild(articleEl);
+        for (let chiave in array[index]){
+            articleEl.append(singolaClasse[chiave]);
+        }
+    }
 
+}
 // Stampare le stesse informazioni su DOM sottoforma di stringhe -->
 // -creo una section nel main;
 // - richiamo la section in selectionEl;

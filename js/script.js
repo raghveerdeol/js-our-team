@@ -29,5 +29,12 @@ let team = [
         ruolo : "Graphic Designer",
         foto : "barbara-ramos-graphic-designer.jpg",
     }
-]
+];
+
+for (let index = 0; index < team.length; index++) {
+    const singolaClasse = team[index];
+    for (let chiave in team[index]){
+        console.log(singolaClasse[chiave]);
+    }
+}
 console.log(team)

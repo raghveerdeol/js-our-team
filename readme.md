@@ -16,7 +16,7 @@ Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto. -
 
 <!-- MILESTONE 1:
 Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto -->
-- uso un ciclo for con index < team.length per stampare le informazioni in console per ogni membro.
+- uso un ciclo for con index < team.length con al interno un ciclo for in per stampare le informazioni in console per ogni membro.
 <!-- MILESTONE 2:
 Stampare le stesse informazioni su DOM sottoforma di stringhe -->
 -creo una section nel main;
